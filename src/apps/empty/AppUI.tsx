@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 import { Container, Heading, Text } from "@open-pioneer/chakra-integration";
 import { useIntl, useService } from "open-pioneer:react-hooks";
+import { SomeComponents } from "./components/SomeComponents";
 
 export function AppUI() {
     const intl = useIntl();
@@ -12,9 +13,7 @@ export function AppUI() {
                 {intl.formatMessage({ id: "heading" })}
             </Heading>
             <Text pt={5}>{intl.formatMessage({ id: "text" })}</Text>
-            <Text pt={5}>
-                This messages comes from the sample package{"'"}s greeter service: {greeter.greet()}
-            </Text>
+            <SomeComponents />
         </Container>
     );
 }
